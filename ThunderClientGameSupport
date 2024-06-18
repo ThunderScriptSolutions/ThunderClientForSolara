@@ -1,0 +1,26 @@
+local games = {
+    Arsenal = 286090429,
+    MM2 = 142823291,
+    CBRO = 301549746,
+    PhantomForces = 292439477,
+    Frontlines = 5938036553,
+    Aimblox = {9441238005, 6808489605}
+}
+
+local currentPlaceId = game.PlaceId
+
+if currentPlaceId == games.Arsenal then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b95e8fecdf824e41f4a030044b055add.lua"))()
+elseif currentPlaceId == games.MM2 then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e17a3265227487405f510d9439c77e0e.lua"))()
+elseif currentPlaceId == games.CBRO then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1e0877da0e18082b845326377024dc6c.lua"))()
+elseif currentPlaceId == games.PhantomForces then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0d88df320112e490012f8c2d41538ecd.lua"))()
+elseif currentPlaceId == games.Frontlines then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5bebf0b1e173f4baff73449722204837.lua"))()
+elseif currentPlaceId == games.Aimblox[1] or currentPlaceId == games.Aimblox[2] then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/65cc31cd7a19fb0a97f7009cc3824e84.lua"))()
+else
+    warn("Game not supported!")
+end
